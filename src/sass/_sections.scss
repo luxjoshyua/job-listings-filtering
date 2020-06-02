@@ -6,8 +6,9 @@
     padding-top: 80px;
     .job-item {
       background-color: white;
-      box-shadow: 5px 10px #00000041;
-      border: 2px solid red;
+      box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.1),
+        -4px 0 20px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
       //   FIX THIS HACK!
       &:first-of-type {
         display: none;
@@ -66,6 +67,7 @@
             .row-three {
               p {
                 font-size: 0.75rem;
+                color: $dark-grey;
               }
               .posted-at,
               .contract {
@@ -79,6 +81,29 @@
           }
         }
         .right-content {
+          .languages-tools-wrapper {
+            display: flex;
+            .role-wrapper,
+            .level-wrapper,
+            .languages-wrapper,
+            .tools-wrapper {
+              display: flex;
+            }
+            .roles-background,
+            .levels-background,
+            .languages-background,
+            .tools-background {
+              background-color: $light-background;
+              color: $green;
+              margin-right: 0.6rem;
+              padding: 0.4rem 0.6rem;
+              font-size: 0.75rem;
+              font-weight: 700;
+              border-radius: 10px;
+              box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.1),
+                -4px 0 20px 0 rgba(0, 0, 0, 0.1);
+            }
+          }
         }
       }
     }
