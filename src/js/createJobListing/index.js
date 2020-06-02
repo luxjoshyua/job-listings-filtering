@@ -28,14 +28,12 @@ const createJobPosting = () => {
     // set featured status
     if (job.featured) {
       clone.querySelector(".featured").innerHTML = "Featured";
-
       clone
         .querySelector(".inner")
         .parentElement.classList.add("featured-item");
     } else {
       clone.querySelector(".featured").style.display = "none";
     }
-
     // set job title
     clone.querySelector(".job-title").innerHTML = `${job.position}`;
     // set posted at
@@ -44,7 +42,6 @@ const createJobPosting = () => {
     clone.querySelector(".contract").innerHTML = `${job.contract}`;
     // set location
     clone.querySelector(".location").innerHTML = `${job.location}`;
-
     // set role
     const roleSpan = document.createElement("span");
     roleSpan.innerHTML = `${job.role}`;
