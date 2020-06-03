@@ -19,12 +19,14 @@ const createJobPosting = () => {
 
     // set company name
     clone.querySelector(".company").innerHTML = `${job.company}`;
+
     // set new status
     if (job.new) {
       clone.querySelector(".new").innerHTML = "New!";
     } else {
       clone.querySelector(".new").style.display = "none";
     }
+
     // set featured status
     if (job.featured) {
       clone.querySelector(".featured").innerHTML = "Featured";
@@ -34,35 +36,45 @@ const createJobPosting = () => {
     } else {
       clone.querySelector(".featured").style.display = "none";
     }
+
     // set job title
     clone.querySelector(".job-title").innerHTML = `${job.position}`;
+
     // set posted at
     clone.querySelector(".posted-at").innerHTML = `${job.postedAt}`;
     // set contract
     clone.querySelector(".contract").innerHTML = `${job.contract}`;
     // set location
     clone.querySelector(".location").innerHTML = `${job.location}`;
+
     // set role
     const roleSpan = document.createElement("span");
     roleSpan.innerHTML = `${job.role}`;
+    roleSpan.className = `${job.role}`;
     roleSpan.classList.add("roles-background");
     clone.querySelector(".roles-wrapper").appendChild(roleSpan);
+
     // set level
     const levelSpan = document.createElement("span");
     levelSpan.innerHTML = `${job.level}`;
+    levelSpan.className = `${job.level}`;
     levelSpan.classList.add("levels-background");
     clone.querySelector(".levels-wrapper").appendChild(levelSpan);
+
     // set languages
     job.languages.forEach((language) => {
       const languageSpan = document.createElement("span");
       languageSpan.innerHTML = `${language}`;
+      languageSpan.className = `${language}`;
       languageSpan.classList.add("languages-background");
       clone.querySelector(".languages-wrapper").appendChild(languageSpan);
     });
+
     // set tools
     job.tools.forEach((tool) => {
       const toolSpan = document.createElement("span");
       toolSpan.innerHTML = `${tool}`;
+      toolSpan.className = `${tool}`;
       toolSpan.classList.add("tools-background");
       clone.querySelector(".tools-wrapper").appendChild(toolSpan);
     });
