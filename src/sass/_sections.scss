@@ -1,14 +1,33 @@
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -40px;
+  border-radius: 10px;
+  #search {
+    min-width: 1110px;
+    padding: 2rem 1rem;
+    @include boxShadow;
+    border: transparent;
+    font-family: "Spartan", sans-serif;
+    font-size: 1rem;
+    &:focus {
+      border: 3px solid $green;
+      outline: none;
+    }
+  }
+}
 .main {
-  background-color: $light-background;
-  padding: 4rem 0;
+  padding: 2rem 0;
   .jobs-wrapper {
     max-width: 1110px;
     margin: 0 auto;
     .job-item {
       background-color: white;
-      box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.1),
-        -4px 0 20px 0 rgba(0, 0, 0, 0.1);
+      @include boxShadow;
       margin-bottom: 1.5rem;
+      border-radius: 10px;
       &:first-of-type {
         display: none;
       }

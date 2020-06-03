@@ -1,4 +1,10 @@
 const jobListing = document.querySelectorAll(".job-item");
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("keyup", (e) => {
+  const searchValue = searchInput.value;
+  console.log(searchValue);
+});
 
 // level function
 
