@@ -125,7 +125,6 @@ const createJobPosting = () => {
       db.tool.push(tool);
     });
 
-    // new object here {}
     db.company.push(job.company);
     db.contract.push(job.contract);
     // languages
@@ -133,55 +132,55 @@ const createJobPosting = () => {
     db.location.push(job.location);
     db.position.push(job.position);
     db.role.push(job.role);
-    // tools
-
-    // remove contract duplicates
-    const contractArray = db.contract;
-    const uniqueContractSet = new Set(contractArray);
-    const backToContractArray = [...uniqueContractSet];
-    // console.log(backToContractArray);
-
-    // remove languages duplicates
-    const languageArray = db.languages;
-    const uniqueLanguageSet = new Set(languageArray);
-    const backToLanguageArray = [...uniqueLanguageSet];
-    // console.log(backToLanguageArray);
-
-    // remove level duplicates
-    const levelArray = db.level;
-    const uniqueLevelSet = new Set(levelArray);
-    const backToLevelArray = [...uniqueLevelSet];
-    // console.log(backToLevelArray);
-
-    // remove location duplicates
-    const locationArray = db.location;
-    const uniqueLocationSet = new Set(locationArray);
-    const backToLocationArray = [...uniqueLocationSet];
-    // console.log(backToLocationArray);
-
-    // remove position duplicates
-    const positionArray = db.position;
-    const uniquePositionSet = new Set(positionArray);
-    const backToPositionArray = [...uniquePositionSet];
-    // console.log(backToPositionArray);
-
-    // remove role duplicates
-    const roleArray = db.role;
-    const uniqueRoleSet = new Set(roleArray);
-    const backToRoleArray = [...uniqueRoleSet];
-    // console.log(backToRoleArray);
-
-    // remove tool duplicates
-    const toolArray = db.tool;
-    const uniqueToolSet = new Set(toolArray);
-    const backToToolArray = [...uniqueToolSet];
-    // console.log(backToToolArray);
-
-    // I need to figure out how to push my sanitised array into my db object, and replace the current arrays that are there
-    // console.log(db.tool);
-
     job.dom = clone;
   });
+
+  // new object here {}
+  // tools
+
+  // remove contract duplicates
+  const contractArray = db.contract;
+  const uniqueContractSet = new Set(contractArray);
+  // iterate through the array and push into my var
+  const backToContractArray = [...uniqueContractSet];
+  db.contract = backToContractArray;
+
+  // remove languages duplicates
+  const languageArray = db.languages;
+  const uniqueLanguageSet = new Set(languageArray);
+  const backToLanguageArray = [...uniqueLanguageSet];
+
+  db.languages = backToLanguageArray;
+
+  // remove level duplicates
+  const levelArray = db.level;
+  const uniqueLevelSet = new Set(levelArray);
+  const backToLevelArray = [...uniqueLevelSet];
+  db.level = backToLevelArray;
+
+  // remove location duplicates
+  const locationArray = db.location;
+  const uniqueLocationSet = new Set(locationArray);
+  const backToLocationArray = [...uniqueLocationSet];
+  db.location = backToLocationArray;
+
+  // remove position duplicates
+  const positionArray = db.position;
+  const uniquePositionSet = new Set(positionArray);
+  const backToPositionArray = [...uniquePositionSet];
+  db.position = backToPositionArray;
+
+  // remove role duplicates
+  const roleArray = db.role;
+  const uniqueRoleSet = new Set(roleArray);
+  const backToRoleArray = [...uniqueRoleSet];
+  db.role = backToRoleArray;
+
+  // remove tool duplicates
+  const toolArray = db.tool;
+  const uniqueToolSet = new Set(toolArray);
+  const backToToolArray = [...uniqueToolSet];
+  db.tool = backToToolArray;
 
   //   console.log("how is my db looking", db);
 };
