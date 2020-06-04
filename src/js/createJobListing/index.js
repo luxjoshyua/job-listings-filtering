@@ -107,7 +107,7 @@ const createJobPosting = () => {
           ? clone.getAttribute("data-db") + " " + language.toLowerCase()
           : language.toLowerCase()
       );
-      db.languages.push(language);
+      db.languages.push(language.toLowerCase());
     });
     // set tools
     job.tools.forEach((tool) => {
@@ -122,16 +122,16 @@ const createJobPosting = () => {
           ? clone.getAttribute("data-db") + " " + tool.toLowerCase()
           : tool.toLowerCase()
       );
-      db.tool.push(tool);
+      db.tool.push(tool.toLowerCase());
     });
 
-    db.company.push(job.company);
-    db.contract.push(job.contract);
+    db.company.push(job.company.toLowerCase());
+    db.contract.push(job.contract.toLowerCase());
     // languages
-    db.level.push(job.level);
-    db.location.push(job.location);
-    db.position.push(job.position);
-    db.role.push(job.role);
+    db.level.push(job.level.toLowerCase());
+    db.location.push(job.location.toLowerCase());
+    db.position.push(job.position.toLowerCase());
+    db.role.push(job.role.toLowerCase());
     job.dom = clone;
   });
 

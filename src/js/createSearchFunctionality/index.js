@@ -19,7 +19,7 @@ searchInput.addEventListener("keyup", (e) => {
     if (items[1].includes(searchValue)) {
       //   console.log("we've got a match!");
       //   push into the results array
-      results.push(items[1]);
+      results.push(searchValue.toLowerCase());
     }
   }
 
