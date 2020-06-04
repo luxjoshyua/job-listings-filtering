@@ -1,5 +1,5 @@
 var json = require("../data.json");
-var data = json;
+export let data = json;
 
 export let db = {
   company: [],
