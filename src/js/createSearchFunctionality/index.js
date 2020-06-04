@@ -57,3 +57,12 @@ const toggleAll = (property) => {
     items[1].dom.style.display = property;
   }
 };
+
+// close functionality
+const closeIcon = document.getElementById("closeIcon");
+closeIcon.addEventListener("click", (e) => {
+  searchInput.value = "";
+  Array.from(jobListing).forEach((job) => {
+    job.style.display = "block";
+  });
+});
