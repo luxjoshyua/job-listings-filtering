@@ -1,4 +1,4 @@
-.heading {
-    font-size: 20vh;
-    color: red;
+@mixin boxShadow {
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.1),
+    -4px 0 20px 0 rgba(0, 0, 0, 0.1);
 }
