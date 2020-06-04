@@ -11,11 +11,12 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
   top: -40px;
   border-radius: 10px;
+  padding: 0 2rem;
   .search-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 1110px;
+    min-width: 100%;
     padding: 2rem 1rem;
     @include boxShadow;
     background: white;
@@ -42,6 +43,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 .main {
+  padding: 0 2rem;
   .jobs-wrapper {
     max-width: 1110px;
     margin: 0 auto;
@@ -61,10 +63,17 @@ input[type="search"]::-webkit-search-results-decoration {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include sm {
+          flex-direction: column;
+          justify-content: center;
+        }
         .left-content {
           display: flex;
           justify-content: center;
           align-items: center;
+          @include sm {
+            padding-bottom: 1.5rem;
+          }
           .logo-outer {
             border-radius: 50%;
             padding-right: 1rem;
