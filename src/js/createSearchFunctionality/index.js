@@ -1,8 +1,21 @@
 const jobListing = document.querySelectorAll(".job-item");
 const searchInput = document.getElementById("search");
+import { db } from "../createJobListing";
+// console.log(db);
 
 searchInput.addEventListener("keyup", (e) => {
-  const searchValue = searchInput.value;
+  //   console.log(e);
+  const searchValue = e.target.value;
+
+  //   check if search value matches any values within the db object
+  if (searchValue.includes(db)) {
+    console.log("We have a match!");
+  } else {
+    return false;
+  }
+
+  // if there is a match, show that job tile, hide the others
+
   console.log(searchValue);
 });
 
