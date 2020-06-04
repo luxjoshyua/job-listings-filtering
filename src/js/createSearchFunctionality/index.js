@@ -16,7 +16,7 @@ searchInput.addEventListener("keyup", (e) => {
 
   // if there is a match, show that job tile, hide the others
 
-  console.log(searchValue);
+  //   console.log(searchValue);
 });
 
 // level function

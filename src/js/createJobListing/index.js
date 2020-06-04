@@ -177,8 +177,13 @@ const createJobPosting = () => {
     const backToToolArray = [...uniqueToolSet];
     // console.log(backToToolArray);
 
+    // I need to figure out how to push my sanitised array into my db object, and replace the current arrays that are there
+    // console.log(db.tool);
+
     job.dom = clone;
   });
+
+  //   console.log("how is my db looking", db);
 };
 
 // once populated, remove the duplicates in the db object
