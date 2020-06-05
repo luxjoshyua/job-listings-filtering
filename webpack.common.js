@@ -59,8 +59,8 @@ module.exports = {
     }),
     new CopyPlugin([
       {
-        from: "src/assets/images/",
-        to: "./assets/images/",
+        from: "../../assets/images/",
+        to: "../../assets/images/",
         toType: "dir"
       }
     ])
