@@ -18,10 +18,13 @@ const createJobPosting = () => {
   data.forEach((job) => {
     const jobListing = document.querySelector(".job-item");
     const clone = jobListing.cloneNode(true);
-    jobsContainer.appendChild(clone);
     // set image
-    clone.querySelector(".logo-outer img").setAttribute("src", `${job.logo}`);
-    clone.querySelector(".logo-outer img").setAttribute("width", "100%");
+    const imgParent = clone.querySelector('.logo-outer');
+    const imgElem = document.createElement("img");
+    imgElem.setAttribute("src", `${job.logo}`);
+    imgElem.setAttribute("width", "100%");
+    imgParent.appendChild(imgElem);
+    jobsContainer.appendChild(clone);
     // set company name
     clone.querySelector(".company").innerHTML = `${job.company}`;
     clone.setAttribute(
