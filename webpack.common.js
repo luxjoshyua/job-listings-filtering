@@ -8,7 +8,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: [{ loader: "html-loader", options: { minimize: true } }]
+        use: [{ loader: "html-loader", options: { minimize: true } }],
       },
       {
         test: /\.(png|jpe?g)/i,
@@ -17,17 +17,17 @@ module.exports = {
             loader: "url-loader",
             options: {
               name: "./img/[name].[ext]",
-              limit: 10000
-            }
+              limit: 10000,
+            },
           },
           {
-            loader: "img-loader"
-          }
-        ]
+            loader: "img-loader",
+          },
+        ],
       },
       {
         test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use : ['file-loader']
+        use: ["file-loader"],
       },
       {
         test: /\.scss$/,
@@ -35,27 +35,27 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader",
-          "sass-loader"
-        ]
+          "sass-loader",
+        ],
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/,
         query: {
-          plugins: ['transform-class-properties']
-        }
-      }
-    ]
+          plugins: ["transform-class-properties"],
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "src/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
     }),
     new CopyPlugin([
       {
