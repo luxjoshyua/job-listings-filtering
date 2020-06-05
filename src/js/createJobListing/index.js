@@ -19,7 +19,7 @@ const createJobPosting = () => {
     const jobListing = document.querySelector(".job-item");
     const clone = jobListing.cloneNode(true);
     // set image
-    const imgParent = clone.querySelector('.logo-outer');
+    const imgParent = clone.querySelector(".logo-outer");
     const imgElem = document.createElement("img");
     imgElem.setAttribute("src", `${job.logo}`);
     imgElem.setAttribute("width", "100%");

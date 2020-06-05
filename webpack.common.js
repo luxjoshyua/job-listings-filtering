@@ -62,7 +62,7 @@ module.exports = {
         from: "./src/assets/images/",
         to: "./src/assets/images/",
         toType: "dir"
-      }
-    ])
+      },
+    ]),
   ],
 };
