@@ -4,6 +4,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
+
 .search-wrapper {
   display: flex;
   align-items: center;
@@ -16,12 +17,12 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // min-width: 100%;
     padding: 2rem 1rem;
     @include boxShadow;
     background: white;
     border: 3px solid $green;
     max-width: 1110px;
+    width: 100%;
     #search {
       font-size: 1rem;
       line-height: 2rem;
