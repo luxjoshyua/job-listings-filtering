@@ -1,3 +1,10 @@
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
 .search-wrapper {
   display: flex;
   align-items: center;
@@ -5,21 +12,43 @@
   position: relative;
   top: -40px;
   border-radius: 10px;
-  #search {
-    min-width: 1110px;
+  margin: 0 auto;
+  .search-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 2rem 1rem;
     @include boxShadow;
-    border: transparent;
-    font-family: "Spartan", sans-serif;
-    font-size: 1rem;
-    line-height: 2rem;
-    &:focus {
-      border: 3px solid $green;
-      outline: none;
+    background: white;
+    border: 3px solid $green;
+    max-width: 1110px;
+    width: 100%;
+    #search {
+      font-size: 1rem;
+      line-height: 2rem;
+      border: transparent;
+      font-family: "Spartan", sans-serif;
+      width: 100%;
+      text-align: left;
+      padding-left: 2rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    .fa-times-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 40px;
+      min-width: 50px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
 .main {
+  padding: 0 2rem;
   .jobs-wrapper {
     max-width: 1110px;
     margin: 0 auto;
@@ -29,7 +58,7 @@
       margin-bottom: 1.5rem;
       border-radius: 10px;
       &:first-of-type {
-        display: none;
+        display: none !important;
       }
       &.featured-item {
         border-left: 4px solid $green;
@@ -39,10 +68,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include sm {
+          flex-direction: column;
+          justify-content: center;
+        }
         .left-content {
           display: flex;
           justify-content: center;
           align-items: center;
+          @include sm {
+            padding-bottom: 1.5rem;
+          }
           .logo-outer {
             border-radius: 50%;
             padding-right: 1rem;
